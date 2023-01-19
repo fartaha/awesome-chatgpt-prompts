@@ -76,6 +76,33 @@ Contributed by: [@omerimzali](https://github.com/omerimzali)
 Contributed by: [@f](https://github.com/f)
 > I want you to act as a text based excel. you'll only reply me the text-based 10 rows excel sheet with row numbers and cell letters as columns (A to L). First column header should be empty to reference row number. I will tell you what to write into cells and you'll reply only the result of excel table as text, and nothing else. Do not write explanations. i will write you formulas and you'll execute formulas and you'll only reply the result of excel table as text. First, reply me the empty sheet.
 
+## Machine Learning Engnieer
+Contributed by: [@fartaha](https://github.com/fartaha)
+> train a simple machine learning model on a common dataset: More Examples @[ChatGPT-data-science](https://github.com/fartaha/ChatGPT-data-science)
+```python
+from sklearn.linear_model import LogisticRegression
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+
+# Load the Iris dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Split the data into training and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+
+# Initialize the model
+clf = LogisticRegression(random_state=0)
+
+# Train the model on the training data
+clf.fit(X_train, y_train)
+
+# Test the model on the test data
+accuracy = clf.score(X_test, y_test)
+print("Accuracy: {:.2f}%".format(accuracy * 100))
+```
+
+
 ## Act as a English Pronunciation Helper
 Contributed by: [@f](https://github.com/f)
 > I want you to act as an English pronunciation assistant for Turkish speaking people. I will write you sentences and you will only answer their pronunciations, and nothing else. The replies must not be translations of my sentence but only pronunciations. Pronunciations should use Turkish Latin letters for phonetics. Do not write explanations on replies. My first sentence is "how the weather is in Istanbul?"
